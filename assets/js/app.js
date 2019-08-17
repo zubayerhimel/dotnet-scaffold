@@ -9,10 +9,14 @@ function generateCommand(){
     }
     else if (getControllerName != ""){
         var setCommand = ("dotnet aspnet-codegenerator controller -name " +getControllerName+ " -m " +getModelName+" -dc " +getDatabaseName+ " --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries");
-        alert(setCommand);
     }
     else{
         var setCommand = ("dotnet aspnet-codegenerator controller -name " +getModelName+ "Controller -m " +getModelName+" -dc " +getDatabaseName+ " --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries");
-        alert(setCommand);
     }
+
+    $(document).ready(function(){
+        $("#show").click(function(){
+          $("#copy_text").text(setCommand);
+        });
+    });
 }
