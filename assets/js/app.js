@@ -5,13 +5,14 @@ function generateCommand(){
     var getControllerName = document.getElementById('controller_name').value;
 
     if(getModelName == "" || getDatabaseName == ""){
-        alert("Please fill the fields");
+        M.toast({html: 'Please fill up the fields.', classes: 'red'});
     }
-    else if (getModelName == "" || getDatabaseName == "" && getControllerName != ""){
-        alert("please fill the fields");
+    else if (getControllerName != ""){
+        var setCommand = ("dotnet aspnet-codegenerator controller -name " +getControllerName+ " -m " +getModelName+" -dc " +getDatabaseName+ " --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries");
+        alert(setCommand);
     }
     else{
-        var setCommand = ("dotnet aspnet-codegenerator controller -name " +getControllerName+ " -m " +getModelName+" -dc " +getDatabaseName+ " --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries");
+        var setCommand = ("dotnet aspnet-codegenerator controller -name " +getModelName+ "Controller -m " +getModelName+" -dc " +getDatabaseName+ " --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries");
         alert(setCommand);
     }
 }
