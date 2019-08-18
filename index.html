@@ -19,26 +19,29 @@
                 <div class="center indigo-text">
                     <h4>Command Generator</h4>
                 </div><br><br>
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input placeholder="Movie" id="model_name" type="text" class="validate">
-                            <label for="first_name">Model Name</label>
+                <div class="card card card-default">
+                   <br>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Movie" id="model_name" type="text" class="validate">
+                                <label for="first_name">Model Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="MovieContext" id="database_name" type="text" class="validate">
+                                <label for="first_name">Database Class Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="MovieController" id="controller_name" type="text" class="validate">
+                                <label for="first_name">Controller Name (Optional)</label>
+                            </div>
+                            <div class="center">
+                                <a class="waves-effect waves-light btn indigo round z-depth-2" id="show"
+                                    onclick="generateCommand();">Generate
+                                    Command</a>
+                            </div><br>
                         </div>
-                        <div class="input-field col s12">
-                            <input placeholder="MovieContext" id="database_name" type="text" class="validate">
-                            <label for="first_name">Database Class Name</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input placeholder="MovieController" id="controller_name" type="text" class="validate">
-                            <label for="first_name">Controller Name (Optional)</label>
-                        </div>
-                        <div class="center">
-                            <a class="waves-effect waves-light btn indigo round" id="show" onclick="generateCommand();">Generate
-                                Command</a>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div><br><br>
                 <div class="row">
                     <div class="col s12 m12 l12">
                         <div class="card card card-default">

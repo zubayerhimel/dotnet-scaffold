@@ -15,8 +15,24 @@ function generateCommand(){
     }
 
     $(document).ready(function(){
+        // set value 
         $("#show").click(function(){
           $("#copy_text").text(setCommand);
         });
+
+        // select input fields text
+        $("#model_name").click(function(){
+            $(this).select();
+        });
+        $("#database_name").click(function(){
+            $(this).select();
+        });
+        $("#controller_name").click(function(){
+            $(this).select();
+        })
+
+       
     });
 }
+
+
