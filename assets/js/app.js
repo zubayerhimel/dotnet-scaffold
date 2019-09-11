@@ -9,10 +9,7 @@ $(document).ready(function () {
         var getControllerName = $('#controller_name').val();
 
         if (!$('#model_name').val() || !$('#database_name').val()) {
-            M.toast({
-                html: "Fill up the input fields!",
-                classes: "red darken-2"
-            });
+            showToast("Fill up required input field!", "red darken-2");
         }
         else {
             if (!$('#controller_name').val()) {
@@ -25,6 +22,7 @@ $(document).ready(function () {
             $('#copy_text').text(generatedCommand);
             $('#copy_text').select();
             document.execCommand("copy");
+            showToast("Command copied to clipboard", "teal darken-3");
 
             // select text from input field on click
             $("#model_name").click(function () {
@@ -36,3 +34,10 @@ $(document).ready(function () {
         }
     });
 });
+
+function showToast(message, color){
+    M.toast({
+        html: message,
+        classes: color
+    });
+}
