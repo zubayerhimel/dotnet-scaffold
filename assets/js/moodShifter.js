@@ -19,13 +19,3 @@ function moodShifter() {
         setLight();
     }
 }
-
-function setLight() {
-    document.getElementById("icons").className = "fas fa-moon";
-    document.getElementById("icons").innerHTML = " Night";
-}
-
-function setDark() {
-    document.getElementById("icons").className = "fas fa-sun";
-    document.getElementById("icons").innerHTML = " Day";
-}
