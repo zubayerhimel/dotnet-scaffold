@@ -1,3 +1,5 @@
+// self called function 
+
 (function init() {
     if (localStorage.getItem("moodShifter")) {
         document.querySelector("html").classList.toggle("dark");
