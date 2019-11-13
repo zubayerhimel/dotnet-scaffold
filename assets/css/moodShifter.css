@@ -15,16 +15,6 @@
     border-radius: 10px;
 }
 
-.fa-moon {
-    color: #25587C;
-    cursor: pointer;
-}
-
-.fa-sun {
-    color: #f9d71c;
-    cursor: pointer;
-}
-
 #icons{
     font-size: 30px;
 }
