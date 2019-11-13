@@ -1,29 +1,27 @@
-(function __init__() {
-    if (localStorage.getItem("isAandharMode")) {
+(function init() {
+    if (localStorage.getItem("moodShifter")) {
         document.querySelector("html").classList.toggle("dark");
-        __setDark();
+        setDark();
     }
 })();
 
-function aandharMode() {
+function moodShifter() {
     var tempArr = document.querySelector("html").classList;
     document.querySelector("html").classList.toggle("dark");
 
     if (Object.values(tempArr).includes("dark")) {
-        localStorage.setItem("isAandharMode", "1");
-        __setDark();
+        localStorage.setItem("moodShifter", "1");
+        setDark();
     } else {
-        localStorage.removeItem("isAandharMode");
-        __setLight();
+        localStorage.removeItem("moodShifter");
+        setLight();
     }
 }
 
-function __setLight() {
-    document.getElementById("paragraph").innerHTML = "রাতের বেলায় ফিরে যেতে চাঁদ মামার উপর ক্লিক করুন";
-    document.getElementById("icon").className = "fas fa-moon";
+function setLight() {
+    document.getElementById("icons").className = "fas fa-moon";
 }
 
-function __setDark() {
-    document.getElementById("paragraph").innerHTML = "দিনের বেলায় ফিরে যেতে সূর্য্যি মামার উপর ক্লিক করুন";
-    document.getElementById("icon").className = "fas fa-sun";
+function setDark() {
+    document.getElementById("icons").className = "fas fa-sun";
 }
