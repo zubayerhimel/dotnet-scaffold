@@ -16,46 +16,47 @@
     <main>
         <br>
         <div class="container">
-            <i id="icons" class="fas fa-moon" onclick="moodShifter()"></i>
+            <div class="row">
+                <i id="icons" class="fas fa-moon" onclick="moodShifter()"> Day</i>
+                <div class="center amber-text text-darken-4">
+                    <h4 style="font-family: 'Satisfy', cursive;">Command Generator</h4>
+                </div>
+                <br>
+                <br>
+                <div class="card card-default z-depth-4">
+                    <br>
+
+                    <form id="command_form">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="model_name" type="text" class="validate" autocomplete="off">
+                                <label for="first_name">Model Name*</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="database_name" type="text" class="validate">
+                                <label for="first_name">Database Class Name*</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="controller_name" type="text" class="validate">
+                                <label for="first_name">Controller Name (Optional)</label>
+                            </div>
+                            <div class="center">
+                                <input type="submit" value="Generate Command" class="btn indigo darken-1 z-depth-3">
+                            </div>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <br>
                 <div class="row">
-                    <div class="center amber-text text-darken-4">
-                        <h4 style="font-family: 'Satisfy', cursive;">Command Generator</h4>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="card card card-default z-depth-4">
-                        <br>
-                        <form id="command_form">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <input id="model_name" type="text" class="validate">
-                                    <label for="first_name">Model Name*</label>
-                                </div>
-                                <div class="input-field col s12">
-                                    <input id="database_name" type="text" class="validate">
-                                    <label for="first_name">Database Class Name*</label>
-                                </div>
-                                <div class="input-field col s12">
-                                    <input id="controller_name" type="text" class="validate">
-                                    <label for="first_name">Controller Name (Optional)</label>
-                                </div>
-                                <div class="center">
-                                    <input type="submit" value="Generate Command" class="btn indigo darken-1 z-depth-3">
-                                </div>
-                                <br>
-                            </div>
-                        </form>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col s12 m12 l12">
-                            <div class="card card card-default">
-                                <textarea name="" id="copy_text" class="grey darken-4 white-text" readonly></textarea>
-                            </div>
+                    <div class="col s12 m12 l12">
+                        <div class="card card card-default">
+                            <textarea name="" id="copy_text" class="grey darken-4 white-text" readonly></textarea>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </main>
 
